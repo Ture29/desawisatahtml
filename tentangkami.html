@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desa Wisata Sangurejo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="img/logo.png">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/app.css">
+    <link rel="stylesheet" href="assets/vendor.css">
+
+</head>
+
+<body class="bg-white text-gray-800 font-opensans">
+
+    
+    <header x-data="{ open: false }" class="bg-primary text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
+        <a href="/" class="flex items-center space-x-3">
+            <img src="img/logo.png" alt="Logo Desa Wisata" class="h-10"/>
+        </a>
+
+        <!-- Tombol hamburger -->
+        <button @click="open = !open" class="md:hidden focus:outline-none">
+            <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Menu navigasi (desktop) -->
+        <nav class="hidden md:flex space-x-6 text-[16px] font-semibold">
+            <a href="/" class="hover:text-green-300 transition">Home</a>
+            <a href="tentangkami.html" class="hover:text-green-300 transition">Tentang Kami</a>
+            <a href="paketwisata.html" class="hover:text-green-300 transition">Paket Wisata</a>
+            <a href="galeri.html" class="hover:text-green-300 transition">Galeri</a>
+            <a href="jadawalkegiatan.html" class="hover:text-green-300 transition">Jadwal Kegiatan</a>
+        </nav>
+    </div>
+
+    <!-- Menu navigasi (mobile) -->
+    <nav x-show="open" x-transition class="md:hidden px-6 pb-4 space-y-2 text-[16px] font-semibold">
+        <a href="/" class="block hover:text-green-300 transition">Home</a>
+        <a href="tentangkami.html" class="block hover:text-green-300 transition">Tentang Kami</a>
+        <a href="paketwisata.html" class="block hover:text-green-300 transition">Paket Wisata</a>
+        <a href="galeri.html" class="block hover:text-green-300 transition">Galeri</a>
+        <a href="jadawalkegiatan.html" class="block hover:text-green-300 transition">Jadwal Kegiatan</a>
+    </nav>
+</header>
+
+    
+    <main>
+        
+<section class="relative">
+    <img src="img/baner.jpg" 
+         alt="Desa Wisata Hijau" 
+         class="w-full h-[400px] object-cover" />
+
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4"
+         style="background-color: rgba(26, 71, 49, 0.4);">
+        <h1 class="text-white text-[40px] md:text-3xl font-extrabold drop-shadow-lg">
+            Selamat Datang di Desa Wisata Sangurejo
+        </h1>
+        <p class="text-white mt-3 max-w-xl text-[25px] md:text-xl">
+            Temukan keindahan alami dan budaya yang asri di desa kami yang hijau dan penuh fasilitas.
+        </p>
+        <a href="paketwisata.html" class="mt-6 inline-block bg-button hover:bg-hover-button text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition">
+            Lihat Paket Wisata
+        </a>
+    </div>
+</section>
+
+
+<section class="py-[60px] px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40 bg-white">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 lg:px-20 xl:px-[40px]">
+        <h2 class="text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] xl:text-[40px] font-bold text-black mb-6">
+            Tentang Kami
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl lg:text-[22px] xl:text-[25px] text-black leading-relaxed text-justify">
+            Desa wisata Sangurejo terletak di Sangurejo, Turi, Kab. Sleman, DI Yogyakarta. Sangurejo merupakan desa wisata
+            yang memiliki pemandangan yang indah dengan alam yang sangat asri dan sangat cocok untuk kegiatan yang berbasis
+            komunitas atau pelajar. Dibalik terbentuknya Desa Wisata Sangurejo terdapat sejarah yang melandasi. Awalnya masyarakat di Desa Sangurejo
+            tidak memiliki angan-angan untuk menjadikan desa Sangurejo menjadi desa wisata. Dulu ini merupakan sebuah embung
+            atau waduk yang diberi nama Embung Kaliaji. Pada tahun 2012, dikarenakan pengunjung banyak yang berdatangan dan perkembangan semakin maju, maka diolah
+            menjadi suatu destinasi.
+
+            <br><br>
+            Kemudian dilaporkan ke Dinas Pariwisata untuk menjadikan destinasi wisata. Pada tahun
+            2014, pengelolaan mulai belajar dari pendatang-pendatang selaku pengelihat wisata, dibuat struktur secara
+            perlahan dan mendaftarkan diri ke Dinas Pariwisata sebagai desa wisata pada tahun 2016 dan dipadukan dengan Pok
+            Darwis.
+
+            <br><br>
+            Desa Wisata Sangurejo ini awalnya merupakan satu keluarga dan kemudian keturunannya menjadi satu kampung. Desa
+            wisata ini dibuat menggunakan sumbangan dari dana keistimewaan yang dikelola sehingga terciptanya Desa Wisata
+            Sangurejo.
+        </p>
+    </div>
+</section>
+
+
+<section class="py-24 bg-white">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-16 text-gray-900">Aktivitas</h2>
+
+        <div class="relative w-full mx-auto">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                            <img src="img/aktivitas1.jpg"
+                                class="rounded-[30px] w-[472px] h-[302px] object-cover shadow-xl" />
+                        </div>
+                                            <div class="swiper-slide">
+                            <img src="img/aktivitas2.jpg"
+                                class="rounded-[30px] w-[472px] h-[302px] object-cover shadow-xl" />
+                        </div>
+                                            <div class="swiper-slide">
+                            <img src="img/aktivitas3.jpg"
+                                class="rounded-[30px] w-[472px] h-[302px] object-cover shadow-xl" />
+                        </div>
+                                            <div class="swiper-slide">
+                            <img src="img/aktivitas4.jpg"
+                                class="rounded-[30px] w-[472px] h-[302px] object-cover shadow-xl" />
+                        </div>
+                                            <div class="swiper-slide">
+                            <img src="img/aktivitas5.jpg"
+                                class="rounded-[30px] w-[472px] h-[302px] object-cover shadow-xl" />
+                        </div>
+                                            <div class="swiper-slide">
+                            <img src="img/aktivitas1.jpg"
+                                class="rounded-[30px] w-[472px] h-[302px] object-cover shadow-xl" />
+                        </div>
+                                            <div class="swiper-slide">
+                            <img src="img/aktivitas2.jpg"
+                                class="rounded-[30px] w-[472px] h-[302px] object-cover shadow-xl" />
+                        </div>
+                                            <div class="swiper-slide">
+                            <img src="img/aktivitas3.jpg"
+                                class="rounded-[30px] w-[472px] h-[302px] object-cover shadow-xl" />
+                        </div>
+                                            <div class="swiper-slide">
+                            <img src="img/aktivitas4.jpg"
+                                class="rounded-[30px] w-[472px] h-[302px] object-cover shadow-xl" />
+                        </div>
+                                            <div class="swiper-slide">
+                            <img src="img/aktivitas5.jpg"
+                                class="rounded-[30px] w-[472px] h-[302px] object-cover shadow-xl" />
+                        </div>
+                                    </div>
+                <div class="swiper-pagination mt-6"></div>
+            </div>
+
+            
+            <div class="flex justify-center items-center gap-6 mt-6">
+                <div class="swiper-button-prev relative text-teal-600"></div>
+                <div class="swiper-button-next relative text-teal-600"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    
+    <footer class="bg-primary text-white py-10 px-1">
+    <div class="max-w-6xl mx-auto">
+        <!-- Grid Row 1: Lokasi & Kontak -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-50 mb-12">
+            <!-- Lokasi Section -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold border-b pb-2 border-green-600">Lokasi Kami</h3>
+                <div class="flex items-start gap-3">
+                    <i class="fas fa-map-marker-alt mt-1 text-green-300"></i>
+                    <div>
+                        <p class="font-medium">Desa Wisata Hijau Sangurejo</p>
+                        <p class="text-green-200 text-sm">Jl. Raya Desa Sangurejo No.123, Turi, Sleman, DIY</p>
+                    </div>
+                </div>
+                <div class="h-60 rounded-lg overflow-hidden border border-green-700 mt-4">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.328253614751!2d110.3761608!3d-7.647807200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5fcb7208b3f7%3A0x5f3ba75243827325!2sDesa%20Wisata%20Sangurejo!5e0!3m2!1sid!2sid!4v1750931939200!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                        class="w-full h-full"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Kontak Section -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold border-b pb-2 border-green-600">Hubungi Kami</h3>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-phone text-green-300"></i>
+                        <div>
+                            <p class="font-medium">Telepon</p>
+                            <a href="tel:+62274568231" class="text-green-200 hover:text-white transition">+62 274 568 231</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-green-300"></i>
+                        <div>
+                            <p class="font-medium">Email</p>
+                            <a href="mailto:info@desawisata.com" class="text-green-200 hover:text-white transition">info@desawisata.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-whatsapp text-green-300"></i>
+                        <div>
+                            <p class="font-medium">WhatsApp</p>
+                            <a href="https://wa.me/6281234567890" class="text-green-200 hover:text-white transition">+62 812 3456 7890</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-instagram text-green-300"></i>
+                        <div>
+                            <p class="font-medium">Instagram</p>
+                            <a href="https://instagram.com/desawisata" class="text-green-200 hover:text-white transition">@desawisata</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Row 2: Credits -->
+        <div class="pt-6 border-t border-green-700 text-center">
+            <p class="text-green-300 text-sm">
+                © 2024 Desa Wisata Hijau Sangurejo | 
+                Dibuat dengan <i class="fas fa-heart text-red-400"></i> menggunakan 
+                <span class="font-semibold">Laravel & Tailwind CSS</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+        const swiper = new Swiper('.mySwiper', {
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            initialSlide: 2,
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 300,
+                modifier: 1,
+                slideShadows: false,
+                scale: 1,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 1.5,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+    </script>
+    
+</body>
+
+</html>

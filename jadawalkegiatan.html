@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desa Wisata Sangurejo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-DXSPAVn5.css" /><link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-CLLlcC51.css" /><link rel="modulepreload" href="http://127.0.0.1:8000/build/assets/app-DwaBwTzn.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-DXSPAVn5.css" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-CLLlcC51.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-DwaBwTzn.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="http://127.0.0.1:8000/img/logo.png">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body class="bg-white text-gray-800 font-opensans">
+
+    
+    <header x-data="{ open: false }" class="bg-primary text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
+        <a href="/" class="flex items-center space-x-3">
+            <img src="http://127.0.0.1:8000/img/logo.png" alt="Logo Desa Wisata" class="h-10"/>
+        </a>
+
+        <!-- Tombol hamburger -->
+        <button @click="open = !open" class="md:hidden focus:outline-none">
+            <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Menu navigasi (desktop) -->
+        <nav class="hidden md:flex space-x-6 text-[16px] font-semibold">
+            <a href="/" class="hover:text-green-300 transition">Home</a>
+            <a href="/tentangkami" class="hover:text-green-300 transition">Tentang Kami</a>
+            <a href="/paketwisata" class="hover:text-green-300 transition">Paket Wisata</a>
+            <a href="/galeri" class="hover:text-green-300 transition">Galeri</a>
+            <a href="/kalender" class="hover:text-green-300 transition">Jadwal Kegiatan</a>
+        </nav>
+    </div>
+
+    <!-- Menu navigasi (mobile) -->
+    <nav x-show="open" x-transition class="md:hidden px-6 pb-4 space-y-2 text-[16px] font-semibold">
+        <a href="/" class="block hover:text-green-300 transition">Home</a>
+        <a href="/tentangkami" class="block hover:text-green-300 transition">Tentang Kami</a>
+        <a href="/paketwisata" class="block hover:text-green-300 transition">Paket Wisata</a>
+        <a href="/galeri" class="block hover:text-green-300 transition">Galeri</a>
+        <a href="/kalender" class="block hover:text-green-300 transition">Jadwal Kegiatan</a>
+    </nav>
+</header>
+
+    
+    <main>
+        
+
+<div class="text-center mb-8">
+    <h1 class="text-2xl md:text-3xl font-bold">Jadwal Kegiatan Desa Wisata Sangurejo</h1>
+    <p class="text-sm text-gray-600 mt-2">Informasi ketersediaan kegiatan selama 7 hari ke depan</p>
+</div>
+
+
+<div class="grid md:grid-cols-2 gap-4 mb-10">
+    <div class="bg-green-50 border border-green-200 p-4 rounded shadow">
+        <h2 class="font-bold text-green-700 mb-2">Kegiatan Besar</h2>
+        <ul class="list-disc ml-5 text-sm text-gray-700">
+            <li>Contoh: Pramuka, LDKS, Kemah</li>
+            <li>Menggunakan semua slot waktu: <strong>Pagi, Siang, Malam</strong></li>
+            <li>Durasi kegiatan umumnya <strong>3–7 hari berturut-turut</strong></li>
+            <li>Tidak diperbolehkan ada kegiatan lain pada tanggal tersebut</li>
+        </ul>
+    </div>
+    <div class="bg-yellow-50 border border-yellow-200 p-4 rounded shadow">
+        <h2 class="font-bold text-yellow-700 mb-2">Kegiatan Kecil</h2>
+        <ul class="list-disc ml-5 text-sm text-gray-700">
+            <li>Contoh: Trekking, Workshop, Foto Alam</li>
+            <li>Memakai <strong>1 slot waktu</strong> saja (contoh: Siang)</li>
+            <li>Durasi singkat, biasanya <strong>2–4 jam</strong></li>
+            <li>✅ Bisa digabung dengan kegiatan lain selama slot waktu berbeda</li>
+        </ul>
+    </div>
+</div>
+
+<div class="max-w-2xl mx-auto p-6 bg-white shadow-md rounded">
+    <h2 class="text-xl font-bold text-white bg-green-700 px-4 py-2 rounded-t">Filter Jadwal Kegiatan</h2>
+
+    
+    <form method="GET" class="bg-green-50 p-6 rounded-b space-y-4">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-sm font-semibold mb-1">Jenis Kegiatan</label>
+                <select name="kegiatan" class="w-full border px-3 py-2 rounded">
+                    <option value="">-- Semua --</option>
+                    <option value="Makrab">Makrab (Kegiatan Besar)</option>
+                    <option value="Trekking">Trekking (Kegiatan Kecil)</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Foto Alam">Foto Alam</option>
+                    <option value="Gathering">Gathering Perusahaan</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold mb-1">Durasi Hari</label>
+                <select name="durasi" class="w-full border px-3 py-2 rounded">
+                    <option value="">-- Semua --</option>
+                    <option value="1">1 Hari</option>
+                    <option value="2">2 Hari</option>
+                    <option value="3">3 Hari</option>
+                    <option value="7">1 Pekan</option>
+                </select>
+            </div>
+        </div>
+
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-sm font-semibold mb-1">Waktu</label>
+                <select name="slot_waktu" class="w-full border px-3 py-2 rounded">
+                    <option value="">-- Semua --</option>
+                    <option value="pagi">Pagi (06:00 - 10:00)</option>
+                    <option value="siang">Siang (10:00 - 14:00)</option>
+                    <option value="sore">Sore (14:00 - 18:00)</option>
+                    <option value="malam">Malam (18:00 - 21:00)</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold mb-1">Tanggal Kegiatan</label>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                    <input type="date" name="start" class="w-full sm:w-[calc(50%-1rem)] border px-3 py-2 rounded">
+                    <span class="text-sm text-center">s/d</span>
+                    <input type="date" name="end" class="w-full sm:w-[calc(50%-1rem)] border px-3 py-2 rounded">
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="flex justify-end">
+            <button type="submit" class="bg-green-700 hover:bg-green-800 text-white px-6 py-2 rounded flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                Tampilkan Jadwal
+            </button>
+        </div>
+    </form>
+
+    
+    <div class="mt-10">
+        <h3 class="text-lg font-semibold mb-4">Jadwal 7 Hari ke Depan</h3>
+        <div class="space-y-3">
+            
+                            
+                <div class="border-l-4 bg-green-50 text-green-800 border-green-300 p-4 rounded shadow">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-semibold">Saturday, 19 July 2025</p>
+                            <p class="text-sm italic">Tersedia</p>
+                                                                                </div>
+                        <div>
+                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                    </div>
+                    </div>
+                </div>
+                                
+                <div class="border-l-4 bg-green-50 text-green-800 border-green-300 p-4 rounded shadow">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-semibold">Sunday, 20 July 2025</p>
+                            <p class="text-sm italic">Tersedia</p>
+                                                                                </div>
+                        <div>
+                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                    </div>
+                    </div>
+                </div>
+                                
+                <div class="border-l-4 bg-green-50 text-green-800 border-green-300 p-4 rounded shadow">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-semibold">Monday, 21 July 2025</p>
+                            <p class="text-sm italic">Tersedia</p>
+                                                                                </div>
+                        <div>
+                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                    </div>
+                    </div>
+                </div>
+                                
+                <div class="border-l-4 bg-green-50 text-green-800 border-green-300 p-4 rounded shadow">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-semibold">Tuesday, 22 July 2025</p>
+                            <p class="text-sm italic">Tersedia</p>
+                                                                                </div>
+                        <div>
+                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                    </div>
+                    </div>
+                </div>
+                                
+                <div class="border-l-4 bg-green-50 text-green-800 border-green-300 p-4 rounded shadow">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-semibold">Wednesday, 23 July 2025</p>
+                            <p class="text-sm italic">Tersedia</p>
+                                                                                </div>
+                        <div>
+                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                    </div>
+                    </div>
+                </div>
+                                
+                <div class="border-l-4 bg-green-50 text-green-800 border-green-300 p-4 rounded shadow">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-semibold">Thursday, 24 July 2025</p>
+                            <p class="text-sm italic">Tersedia</p>
+                                                                                </div>
+                        <div>
+                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                    </div>
+                    </div>
+                </div>
+                                
+                <div class="border-l-4 bg-green-50 text-green-800 border-green-300 p-4 rounded shadow">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-semibold">Friday, 25 July 2025</p>
+                            <p class="text-sm italic">Tersedia</p>
+                                                                                </div>
+                        <div>
+                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                    </div>
+                    </div>
+                </div>
+                        </div>
+    </div>
+</div>
+    </main>
+
+    
+    <footer class="bg-primary text-white py-10 px-1">
+    <div class="max-w-6xl mx-auto">
+        <!-- Grid Row 1: Lokasi & Kontak -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-50 mb-12">
+            <!-- Lokasi Section -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold border-b pb-2 border-green-600">Lokasi Kami</h3>
+                <div class="flex items-start gap-3">
+                    <i class="fas fa-map-marker-alt mt-1 text-green-300"></i>
+                    <div>
+                        <p class="font-medium">Desa Wisata Hijau Sangurejo</p>
+                        <p class="text-green-200 text-sm">Jl. Raya Desa Sangurejo No.123, Turi, Sleman, DIY</p>
+                    </div>
+                </div>
+                <div class="h-60 rounded-lg overflow-hidden border border-green-700 mt-4">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.328253614751!2d110.3761608!3d-7.647807200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5fcb7208b3f7%3A0x5f3ba75243827325!2sDesa%20Wisata%20Sangurejo!5e0!3m2!1sid!2sid!4v1750931939200!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                        class="w-full h-full"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Kontak Section -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold border-b pb-2 border-green-600">Hubungi Kami</h3>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-phone text-green-300"></i>
+                        <div>
+                            <p class="font-medium">Telepon</p>
+                            <a href="tel:+62274568231" class="text-green-200 hover:text-white transition">+62 274 568 231</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-green-300"></i>
+                        <div>
+                            <p class="font-medium">Email</p>
+                            <a href="mailto:info@desawisata.com" class="text-green-200 hover:text-white transition">info@desawisata.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-whatsapp text-green-300"></i>
+                        <div>
+                            <p class="font-medium">WhatsApp</p>
+                            <a href="https://wa.me/6281234567890" class="text-green-200 hover:text-white transition">+62 812 3456 7890</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-instagram text-green-300"></i>
+                        <div>
+                            <p class="font-medium">Instagram</p>
+                            <a href="https://instagram.com/desawisata" class="text-green-200 hover:text-white transition">@desawisata</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Row 2: Credits -->
+        <div class="pt-6 border-t border-green-700 text-center">
+            <p class="text-green-300 text-sm">
+                © 2024 Desa Wisata Hijau Sangurejo | 
+                Dibuat dengan <i class="fas fa-heart text-red-400"></i> menggunakan 
+                <span class="font-semibold">Laravel & Tailwind CSS</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        
+</body>
+
+</html>

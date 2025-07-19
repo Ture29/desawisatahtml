@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desa Wisata Sangurejo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/app.css">
+    <link rel="stylesheet" href="assets/vendor.css">
+
+</head>
+
+<body class="bg-white text-gray-800 font-opensans">
+
+    
+    <header x-data="{ open: false }" class="bg-primary text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
+        <a href="/" class="flex items-center space-x-3">
+            <img src="img/logo.png" alt="Logo Desa Wisata" class="h-10"/>
+        </a>
+
+        <!-- Tombol hamburger -->
+        <button @click="open = !open" class="md:hidden focus:outline-none">
+            <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Menu navigasi (desktop) -->
+        <nav class="hidden md:flex space-x-6 text-[16px] font-semibold">
+            <a href="/" class="hover:text-green-300 transition">Home</a>
+            <a href="tentangkami.html" class="hover:text-green-300 transition">Tentang Kami</a>
+            <a href="paketwisata.html" class="hover:text-green-300 transition">Paket Wisata</a>
+            <a href="galeri.html" class="hover:text-green-300 transition">Galeri</a>
+            <a href="jadawalkegiatan.html" class="hover:text-green-300 transition">Jadwal Kegiatan</a>
+        </nav>
+    </div>
+
+    <!-- Menu navigasi (mobile) -->
+    <nav x-show="open" x-transition class="md:hidden px-6 pb-4 space-y-2 text-[16px] font-semibold">
+        <a href="/" class="block hover:text-green-300 transition">Home</a>
+        <a href="tentangkami.html" class="block hover:text-green-300 transition">Tentang Kami</a>
+        <a href="paketwisata.html" class="block hover:text-green-300 transition">Paket Wisata</a>
+        <a href="galeri.html" class="block hover:text-green-300 transition">Galeri</a>
+        <a href="jadawalkegiatan.html" class="block hover:text-green-300 transition">Jadwal Kegiatan</a>
+    </nav>
+</header>
+
+    
+    <main>
+        <div class="max-w-3xl mx-auto p-6 bg-white rounded shadow">
+    <h1 class="text-center text-2xl font-bold mb-6">FORM PAKET WISATA</h1>
+
+    
+    <div class="border p-4 mb-6 rounded">
+        <h2 class="text-lg font-semibold mb-4">Informasi Pengunjung</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block font-medium">Nama Lengkap <span class="text-red-500">*</span></label>
+                <input type="text" class="w-full border rounded p-2 mt-1" placeholder="Masukkan Nama Lengkap">
+            </div>
+            <div>
+                <label class="block font-medium">Email <span class="text-red-500">*</span></label>
+                <input type="email" class="w-full border rounded p-2 mt-1" placeholder="Masukkan Email Aktif">
+            </div>
+            <div>
+                <label class="block font-medium">Nomor WhatsApp</label>
+                <input type="text" class="w-full border rounded p-2 mt-1" placeholder="Masukkan Nomor WhatsApp">
+            </div>
+            <div class="md:col-span-2">
+                <label class="block font-medium">Alamat</label>
+                <textarea class="w-full border rounded p-2 mt-1" placeholder="Masukkan Alamat Tempat Tinggal"></textarea>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="border p-4 mb-6 rounded">
+        <h2 class="text-lg font-semibold mb-4">Pilih Tanggal Datang</h2>
+        <div class="flex flex-col md:flex-row gap-6">
+            <div class="md:w-1/2 w-full">
+                <label class="block font-medium">Tanggal Datang</label>
+                <input type="date" class="w-full border rounded p-2 mt-1">
+            </div>
+            <div class="md:w-1/2 w-full">
+                <label class="block font-medium">Jam Operasional</label>
+                <ul class="mt-2 text-sm text-gray-600 leading-relaxed">
+                    <li>Senin - Jumat: 08:30 – 21:55 WIB</li>
+                    <li>Sabtu: 09:00 – 22:55 WIB</li>
+                    <li>Minggu: 09:00 – 22:25 WIB</li>
+                    <li>Libur Nasional: 09:00 – 22:00 WIB</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="border p-4 mb-6 rounded">
+        <h2 class="text-lg font-semibold mb-4">Informasi Pemesanan</h2>
+        <div class="grid grid-cols-1 gap-4">
+            <div>
+                <label class="block font-medium">Nama Paket</label>
+                <input type="text"
+                    class="w-full border rounded p-2 mt-1"
+                    name="nama_paket"
+                    value="Paket Camping"
+                    readonly>
+            </div>
+            <div>
+                <label class="block font-medium">Jumlah Peserta</label>
+                <input type="number" min="1" value="1" class="w-full border rounded p-2 mt-1">
+            </div>
+            <div>
+                <label class="block font-medium">Harga</label>
+                <p class="mt-1 text-lg font-semibold">IDR 25,000.00/pax</p>
+            </div>
+            <div>
+                <label class="block font-medium">Catatan</label>
+                <textarea class="w-full border rounded p-2 mt-1" placeholder="Masukkan Catatan jika ada"></textarea>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="w-full flex flex-col md:flex-row justify-between items-center gap-4 md:gap-[165px] mt-6 px-4">
+        
+        <div class="flex items-center gap-2 w-full md:w-[280px]">
+            <i class="fa-solid fa-arrow-left text-[18px] md:text-2xl text-green-700"></i>
+            <a href="paketwisata.html"
+                class="bg-button text-white text-xs md:text-[14px] font-bold px-4 py-1.5 md:px-[40px] md:py-[10px] rounded-full w-full md:w-[280px] h-[36px] md:h-[42px] flex items-center justify-center hover:bg-hover-button transition duration-300">
+                Kembali
+            </a>
+        </div>
+
+        
+        <div class="flex items-center gap-2 w-full md:w-[280px]">
+            <a href="#"
+                class="bg-button text-white text-xs md:text-[14px] font-bold px-4 py-1.5 md:px-[40px] md:py-[10px] rounded-full w-full md:w-[280px] h-[36px] md:h-[42px] flex items-center justify-center hover:bg-hover-button transition duration-300">
+                Pesan
+            </a>
+            <i class="fa-solid fa-arrow-right text-[18px] md:text-2xl text-green-700"></i>
+        </div>
+    </div>
+
+</div>
+    </main>
+
+    
+    <footer class="bg-primary text-white py-10 px-1">
+    <div class="max-w-6xl mx-auto">
+        <!-- Grid Row 1: Lokasi & Kontak -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-50 mb-12">
+            <!-- Lokasi Section -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold border-b pb-2 border-green-600">Lokasi Kami</h3>
+                <div class="flex items-start gap-3">
+                    <i class="fas fa-map-marker-alt mt-1 text-green-300"></i>
+                    <div>
+                        <p class="font-medium">Desa Wisata Hijau Sangurejo</p>
+                        <p class="text-green-200 text-sm">Jl. Raya Desa Sangurejo No.123, Turi, Sleman, DIY</p>
+                    </div>
+                </div>
+                <div class="h-60 rounded-lg overflow-hidden border border-green-700 mt-4">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.328253614751!2d110.3761608!3d-7.647807200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5fcb7208b3f7%3A0x5f3ba75243827325!2sDesa%20Wisata%20Sangurejo!5e0!3m2!1sid!2sid!4v1750931939200!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                        class="w-full h-full"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Kontak Section -->
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold border-b pb-2 border-green-600">Hubungi Kami</h3>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-phone text-green-300"></i>
+                        <div>
+                            <p class="font-medium">Telepon</p>
+                            <a href="tel:+62274568231" class="text-green-200 hover:text-white transition">+62 274 568 231</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-green-300"></i>
+                        <div>
+                            <p class="font-medium">Email</p>
+                            <a href="mailto:info@desawisata.com" class="text-green-200 hover:text-white transition">info@desawisata.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-whatsapp text-green-300"></i>
+                        <div>
+                            <p class="font-medium">WhatsApp</p>
+                            <a href="https://wa.me/6281234567890" class="text-green-200 hover:text-white transition">+62 812 3456 7890</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-instagram text-green-300"></i>
+                        <div>
+                            <p class="font-medium">Instagram</p>
+                            <a href="https://instagram.com/desawisata" class="text-green-200 hover:text-white transition">@desawisata</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Row 2: Credits -->
+        <div class="pt-6 border-t border-green-700 text-center">
+            <p class="text-green-300 text-sm">
+                © 2024 Desa Wisata Hijau Sangurejo | 
+                Dibuat dengan <i class="fas fa-heart text-red-400"></i> menggunakan 
+                <span class="font-semibold">Laravel & Tailwind CSS</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        
+</body>
+
+</html>

@@ -6,18 +6,14 @@
     <meta charset="UTF-8">
     <title>Desa Wisata Sangurejo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    
-    <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-DXSPAVn5.css" /><link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-CLLlcC51.css" /><link rel="modulepreload" href="http://127.0.0.1:8000/build/assets/app-DwaBwTzn.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-DXSPAVn5.css" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-CLLlcC51.css" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-DwaBwTzn.js"></script>
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="http://127.0.0.1:8000/img/logo.png">
+    <link rel="icon" type="img/png" href="img/logo.png">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/app.css">
+    <link rel="stylesheet" href="assets/vendor.css">
 </head>
 
 <body class="bg-white text-gray-800 font-opensans">
@@ -26,7 +22,7 @@
     <header x-data="{ open: false }" class="bg-primary text-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
         <a href="/" class="flex items-center space-x-3">
-            <img src="http://127.0.0.1:8000/img/logo.png" alt="Logo Desa Wisata" class="h-10"/>
+            <img src="img/logo.png" alt="Logo Desa Wisata" class="h-10"/>
         </a>
 
         <!-- Tombol hamburger -->
@@ -46,20 +42,20 @@
         <!-- Menu navigasi (desktop) -->
         <nav class="hidden md:flex space-x-6 text-[16px] font-semibold">
             <a href="/" class="hover:text-green-300 transition">Home</a>
-            <a href="/tentangkami" class="hover:text-green-300 transition">Tentang Kami</a>
-            <a href="/paketwisata" class="hover:text-green-300 transition">Paket Wisata</a>
-            <a href="/galeri" class="hover:text-green-300 transition">Galeri</a>
-            <a href="/kalender" class="hover:text-green-300 transition">Jadwal Kegiatan</a>
+            <a href="tentangkami.html" class="hover:text-green-300 transition">Tentang Kami</a>
+            <a href="paketwisata.html" class="hover:text-green-300 transition">Paket Wisata</a>
+            <a href="galeri.html" class="hover:text-green-300 transition">Galeri</a>
+            <a href="jadawalkegiatan.html" class="hover:text-green-300 transition">Jadwal Kegiatan</a>
         </nav>
     </div>
 
     <!-- Menu navigasi (mobile) -->
     <nav x-show="open" x-transition class="md:hidden px-6 pb-4 space-y-2 text-[16px] font-semibold">
         <a href="/" class="block hover:text-green-300 transition">Home</a>
-        <a href="/tentangkami" class="block hover:text-green-300 transition">Tentang Kami</a>
-        <a href="/paketwisata" class="block hover:text-green-300 transition">Paket Wisata</a>
-        <a href="/galeri" class="block hover:text-green-300 transition">Galeri</a>
-        <a href="/kalender" class="block hover:text-green-300 transition">Jadwal Kegiatan</a>
+        <a href="tentangkami.html" class="block hover:text-green-300 transition">Tentang Kami</a>
+        <a href="paketwisata.html" class="block hover:text-green-300 transition">Paket Wisata</a>
+        <a href="galeri.html" class="block hover:text-green-300 transition">Galeri</a>
+        <a href="jadawalkegiatan.html" class="block hover:text-green-300 transition">Jadwal Kegiatan</a>
     </nav>
 </header>
 
@@ -172,7 +168,7 @@
                             <p class="text-sm italic">Tersedia</p>
                                                                                 </div>
                         <div>
-                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                        <a href="paketwisata.html" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
                                                     </div>
                     </div>
                 </div>
@@ -184,7 +180,7 @@
                             <p class="text-sm italic">Tersedia</p>
                                                                                 </div>
                         <div>
-                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                        <a href="paketwisata.html" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
                                                     </div>
                     </div>
                 </div>
@@ -196,7 +192,7 @@
                             <p class="text-sm italic">Tersedia</p>
                                                                                 </div>
                         <div>
-                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                        <a href="paketwisata.html" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
                                                     </div>
                     </div>
                 </div>
@@ -208,7 +204,7 @@
                             <p class="text-sm italic">Tersedia</p>
                                                                                 </div>
                         <div>
-                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                        <a href="paketwisata.html" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
                                                     </div>
                     </div>
                 </div>
@@ -220,7 +216,7 @@
                             <p class="text-sm italic">Tersedia</p>
                                                                                 </div>
                         <div>
-                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                        <a href="paketwisata.html" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
                                                     </div>
                     </div>
                 </div>
@@ -232,7 +228,7 @@
                             <p class="text-sm italic">Tersedia</p>
                                                                                 </div>
                         <div>
-                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                        <a href="paketwisata.html" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
                                                     </div>
                     </div>
                 </div>
@@ -244,7 +240,7 @@
                             <p class="text-sm italic">Tersedia</p>
                                                                                 </div>
                         <div>
-                                                        <a href="http://127.0.0.1:8000/paketwisata" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
+                                                        <a href="paketwisata.html" class="inline-block bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2 rounded">Ajukan Reservasi</a>
                                                     </div>
                     </div>
                 </div>

@@ -3,6 +3,13 @@
     { "source": "/tentangkami", "destination": "/tentangkami.html" },
     { "source": "/paketwisata", "destination": "/paketwisata.html" },
     { "source": "/galeri", "destination": "/galeri.html" },
-    { "source": "/jadwalkegiatan", "destination": "/jadawalkegiatan.html" }
+    { "source": "/jadwalkegiatan", "destination": "/jadawalkegiatan.html" },
+    { "source": "/detailpaketmakrab", "destination": "/detailpaketmakrab.html" },
+    { "source": "/detailpaketsikrab", "destination": "/detailpaketsikrab.html" },
+    { "source": "/detailpaketpramuka", "destination": "/detailpaketpramuka.html" },
+    { "source": "/detailpaketpernikahan", "destination": "/detailpaketpernikahan.html" },
+    { "source": "/detailpakethomestay", "destination": "/detailpakethomestay.html" },
+    { "source": "/detailpaketcamping", "destination": "/detailpaketcamping.html" },
+    { "source": "/formbooking", "destination": "/formbooking.html" }
   ]
 }

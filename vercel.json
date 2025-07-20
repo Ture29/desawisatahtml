@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/tentangkami", "destination": "/tentangkami.html" },
+    { "source": "/paketwisata", "destination": "/paketwisata.html" },
+    { "source": "/galeri", "destination": "/galeri.html" },
+    { "source": "/jadwalkegiatan", "destination": "/jadawalkegiatan.html" }
+  ]
+}
